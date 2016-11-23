@@ -1,0 +1,1513 @@
+
+	
+ <map name="p_imag_principal_pme7Map" id="p_imag_principal_pme7Map" title="PME10 Relative Retention Times in Targeted Proteomics" >
+   <area shape="rect" coords="583,-2,745,96" href="PME10_main.asp" alt="PME10 Relative Retention Times in Targeted Proteomics" />
+ </map>
+	
+<HTML>
+<HEAD>
+	 <meta name="verify-v1" content="neqmw8JKiXnQ29esJVpO9z6/O4Yn3KWgrhiuPh6p3sI=" >
+	<TITLE>ProteoRed</TITLE>
+	
+	<LINK REL="stylesheet" TYPE="text/css" href="/Rutinas/default.css">
+	
+    <style type="text/css" media="screen">
+		@import url("../nuevoMenu_may09.css");
+	</style>
+    
+	<script language="JavaScript1.2" type="text/javascript" src="mm_css_menu.js"></script>
+	<script languaje="javascript" src="Rutinas/images.js"></script>
+    
+    <script languaje="javascript">
+		//login			
+		preload('aceptar','Imagenes/p_bot_accept.gif');									
+		preload('aceptarfx','Imagenes/p_bot_accept_fx.gif');
+		
+		function MM_findObj(n, d) { //v4.01
+		  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+			d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+		  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+		  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+		  if(!x && d.getElementById) x=d.getElementById(n); return x;
+		}
+		function MM_swapImage() { //v3.0
+		  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+		   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+		}
+		function MM_swapImgRestore() { //v3.0
+		  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+		}
+		
+		function MM_preloadImages() { //v3.0
+		  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+			var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+			if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+		}
+		function Image_loading() {
+					//MM_preloadImages('img/nuevoMenu_r1_c1_f2.jpg','img/nuevoMenu_r1_c3_f2.gif','img/nuevoMenu_r1_c5_f2.gif','img/nuevoMenu_r1_c7_f2.gif','img/nuevoMenu_r1_c9_f2.gif','img/nuevoMenu_r1_c11_f2.gif','img/nuevoMenu_r1_c13_f2.gif','img/nuevoMenu_r1_c15_f2.gif');
+			//MM_preloadImages('img/nuevoMenu_apr09_r2_c1_f2.jpg','img/nuevoMenu_apr09_r2_c3_f2.gif','img/nuevoMenu_apr09_r2_c5_f2.gif','img/nuevoMenu_apr09_r2_c7_f2.gif','img/nuevoMenu_apr09_r2_c9_f2.gif','img/nuevoMenu_apr09_r2_c11_f2.gif','img/nuevoMenu_apr09_r2_c13_f2.gif','img/nuevoMenu_apr09_r2_c15_f2.gif','img/nuevoMenu_apr09_r2_c17_f2.gif');
+			MM_preloadImages('img/nuevoMenu_may09_r1_c1_f2.jpg','img/nuevoMenu_may09_r1_c3_f2.gif','img/nuevoMenu_may09_r1_c5_f2.gif','img/nuevoMenu_may09_r1_c7_f2.gif','img/nuevoMenu_may09_r1_c9_f2.gif','img/nuevoMenu_may09_r1_c11_f2.gif','img/nuevoMenu_may09_r1_c13_f2.gif','img/nuevoMenu_may09_r1_c15_f2.gif','img/nuevoMenu_may09_r1_c17_f2.gif');
+
+		}
+		function validalogin()
+		{
+			var error=0
+			var forma=document.login
+			if (forma.pmUsuario.value=='')
+				{
+				alert("The user name is needed to log in")
+				forma.pmUsuario.focus()
+				error=1
+				}
+			if (forma.pmPassword.value=='' && error==0)
+				{
+				alert("The password is needed to log in")
+				forma.pmPassword.focus()
+				error=1
+				}				
+			if (error==0)
+				{
+				forma.pmAccion.value="Login"
+				forma.submit()
+				}
+		}
+		
+		function AbrirCreditos()
+		{
+			 MiTOp = (screen.height - 400) / 2;
+    		 MiLeft = (screen.width - 600) / 2;
+			window.open('http://www.tatum.es/creditos.html','Tatum','width=600,height=400,left='+MiLeft+',top='+MiTOp+',screenX='+MiTOp+',screenY='+MiLeft+',scrollbars=no');
+		}
+	</script>	
+   
+
+	<style type="text/css">@import url(Rutinas/jscalendar/calendar-eoi.css);</style>
+	<script type="text/javascript" src="Rutinas/jscalendar/calendar.js"></script>
+	<script type="text/javascript" src="Rutinas/jscalendar/lang/calendar-es.js"></script>
+	<script type="text/javascript" src="Rutinas/jscalendar/calendar-setup.js"></script>	
+	<script type="text/javascript">
+		function cambiaLabel(titulo, tipo) {
+			document.forms["calendario"].elements['EVENTO'].value = titulo;
+			document.forms["calendario"].elements['TIPOEVENTO'].value = tipo;
+		}
+	</script>
+	<style type="text/css">
+  		.special { background-color: #e1f2f9; color: #3f94b3; font-weight: bold;}
+		
+		.ventana{
+
+		display:none;      <!-- es importante ocultar las ventanas previamente -->
+		font-family:Arial, Helvetica, sans-serif;
+		color:#808080;
+		line-height:28px;
+		font-size:15px;
+		text-align:justify;
+
+	}
+		
+		
+	</style>
+	
+	<link href="Calendario/calendario.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="jquery-ui.css" />
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+</HEAD>
+
+
+	
+<body bgcolor="#ECECEC" onLoad="Image_loading();">
+
+<!-- <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" valign="bottom">
+		<table width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="33"><br><br></td>
+			</tr>
+		</table>	
+	</td>
+    <td width="760"> -->
+    
+    
+<!-- CREADO POR MIGUE EL 12 MAYO 2014 PARA EL  NUEVO MAPA -->     
+
+
+
+<div id="dialog_coru" class="ventana" title="A Coruña">
+	<p>Instituto de Investigación Biomédica de A Coruña<br><p style="color:#00a7c3"> Francisco J Blanco
+    </p>
+</div>
+        
+<div id="dialog_bilbao" class="ventana" title="Bilbao">
+	<p>Centro de Investigación Cooperativa en Biociencias<p style="color:#00a7c3">Felix Elortza</p><p>
+Universidad del País Vasco</p><p style="color:#00a7c3">Jesus Mari Arizmendi</p>
+</div>
+ 
+<div id="dialog_pamplo" class="ventana" title="Pamplona">
+	<p>Centro de Investigación Médica Aplicada</p><p>
+(en colaboración con Navarrabiomed)</p><p style="color:#00a7c3">
+Fernando J Corrales</p>
+</div>
+
+<div id="dialog_barce" class="ventana" title="Barcelona">
+	<p>Centro de Regulación Genómica</p><p style="color:#00a7c3">
+Eduard Sabidó</p><br><p>
+Instituto de Investigaciones Biomédicas
+de Barcelona, CSIC</p><p style="color:#00a7c3">
+Joaquín Abián</p><br><p>
+Parque Científico de Barcelona</p><p style="color:#00a7c3">
+Eliandre de Oliveira</p><br><p>
+Instituto de investigación Oncológica Vall d´Hebron</p><p style="color:#00a7c3">
+Francesc Canals</p><br><p>
+Instituto de Investigación Biomédica de Bellvitge</p><p>(en colaboración con el Instituto
+Aragonés de Ciencias de la Salud)</p><p style="color:#00a7c3">
+Silvia Barceló</p><br><p>
+Instituto de Investigación Biomédica </p><p style="color:#00a7c3">
+Marta Vilaseca</p><br><p>
+Universidad de Barcelona</p><p style="color:#00a7c3">
+Oriol Bachs</p>
+
+</p>
+</div>
+
+<div id="dialog_salam" class="ventana" title="Salamanca">
+	<p>Centro de Investigación del Cáncer</p><p style="color:#00a7c3">
+Manuel Fuentes</p>
+</div>
+
+<div id="dialog_coord" class="ventana" title="Coordinación">
+	<p>Centro Nacional de Biotecnología, CSIC</p><p>General Coordinator: <p style="color:#00a7c3">Juan Pablo Albar</p><p>Assisted by:<p style="color:#00a7c3"> Virginia Pavón</p>
+
+</p>
+</div>
+
+<div id="dialog_madrid" class="ventana" title="Madrid">
+<p>Centro Nacional de Biotecnología, CSIC</p><p style="color:#00a7c3"> Juan Pablo Albar</p><br>
+<p>Centro de Biología Molecular Severo Ochoa, CSIC</p><p style="color:#00a7c3"> Anabel Marina</p><br>
+<p>Centro de Investigaciones Biológicas, CSIC</p><p style="color:#00a7c3"> Ignacio Casal</p><br>
+<p>Centro Nacional de Biotecnología, CSIC</p><p style="color:#00a7c3"> Alberto Pascual</p><br>
+<p>Centro Nacional de Investigaciones Cardiovasculares</p><p style="color:#00a7c3">  Jesús M Vázquez</p><br>
+<p>Universidad Complutense de Madrid </p><p style="color:#00a7c3">Concha Gil</p><br><p>Centro Nacional de Investigaciones Oncológicas</p><p style="color:#00a7c3"> Javier Muñoz</p><br><p>
+<p>Fundación Jiménez Díaz</p><p> (en colaboración con el Hospital 
+Nacional de Parapléjicos)</p><p style="color:#00a7c3"> Fernando Vivanco</p>
+</div>
+
+<div id="dialog_valenc" class="ventana" title="Valencia">
+	<p>Universidad de Valencia</p><p style="color:#00a7c3">
+Manuel Sánchez del Pino</p>
+</div>
+
+
+<div id="dialog_cordob" class="ventana" title="Córdoba">
+	<p>Instituto Maimónides de Investigación Biomédica de Córdoba</p>
+<p style="color:#00a7c3">José A Bárcena</p>
+</div>
+
+<div id="dialog_granad" class="ventana" title="Granada">
+	<p>Instituto de Parasitología y Biomedicina "López-Neyra", CSIC
+</p><p style="color:#00a7c3">Jaime Sancho</p>
+<p><a href="http://www.ipb.csic.es/servicios/Proteomica/index.html" target="_blank"><font color="#FF0000"><u><b>VISIT</b></u></font></a></p>
+</div>
+
+
+
+<script type="text/javascript"> 
+	
+		
+$(document).ready(function(){ <!-- --------> ejecuta el script jquery cuando el documento ha terminado de cargarse -->
+	$("#coru").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_coru").dialog({ <!--  ------> muestra la ventana  --> 
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 140,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+
+
+	$("#bilbao").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_bilbao").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 210,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	$("#pamplona").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_pamplo").dialog({ <!--  ------> muestra la ventana  -->
+			width: 430,  <!-- -------------> ancho de la ventana -->
+			height: 170,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	$("#barcelona").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_barce").dialog({ <!--  ------> muestra la ventana  -->
+			width: 430,  <!-- -------------> ancho de la ventana -->
+			height: 350,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+
+	$("#salamanca").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_salam").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 150,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	$("#coord").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_coord").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 300,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	
+	$("#madrid").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_madrid").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 450,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	$("#valencia").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_valenc").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 150,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	$("#cordoba").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_cordob").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 150,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});
+	
+	$("#granada").click(function() { <!-- ------> al pulsar (.click) el boton 1 (#b1) -->
+		$("#dialog_granad").dialog({ <!--  ------> muestra la ventana  -->
+			width: 390,  <!-- -------------> ancho de la ventana -->
+			height: 200,<!--  -------------> altura de la ventana -->
+			show: "scale", <!-- -----------> animación de la ventana al aparecer -->
+			hide: "scale", <!-- -----------> animación al cerrar la ventana -->
+			resizable: "false", <!-- ------> fija o redimensionable si ponemos este valor a "true" -->
+			position: "top",<!--  ------> posicion de la ventana en la pantalla (left, top, right...) -->
+			modal: "true" <!-- ------------> si esta en true bloquea el contenido de la web mientras la ventana esta activa (muy elegante) -->
+		});
+	});							
+		
+	
+});
+	
+	
+</script>
+
+
+<!----------------------------------------------------------- -->
+	
+
+	
+	
+
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="50%" valign="bottom"><table width="100%" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="33"><br />
+            <br /></td>
+      </tr>
+    </table></td>
+    <td width="760">
+		
+	<table width="760" height="420" cellspacing="0" cellpadding="0" align="center">
+		<tr><td bgcolor="#FFFFFF">
+			<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+				<tr>
+					<td width="591" align="left"><a href="http://www.proteored.org"><img src="../Imagenes/p_cabecera_07.gif" width="591" height="91" border="0" alt="ProteoRed - Instituto Nacional de Proteómica"></a></td>
+					<td width="159" align="right" valign="bottom" background="../Imagenes/p_cabecera_02.gif">
+					Oct 7th, 2015&nbsp;</td>
+					<td width="10" align="center"><img src="../Imagenes/p_cabecera_03.gif" alt="" width="10" height="91" border="0"></td>
+				</tr>
+			</table>
+			
+	<div id="FWTableContainer1841063272">
+<table border="0" cellpadding="0" cellspacing="0" width="760">
+<!-- fwtable fwsrc="nuevoMenu_Apr09.png" fwpage="Pgina 1" fwbase="nuevoMenu_may09.gif" fwstyle="Dreamweaver" fwdocid = "1841063272" fwnested="0" -->
+  <tr>
+   <td><img src="img/spacer.gif" width="56" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="75" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="90" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="126" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="90" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="70" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="2" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="76" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="2" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="76" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="91" height="1" border="0" alt="" /></td>
+   <td><img src="img/spacer.gif" width="1" height="1" border="0" alt="" /></td>
+  </tr>
+
+  <tr>
+   <td><a href="http://www.proteored.org" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c1','','img/nuevoMenu_may09_r1_c1_f2.jpg',1);"><img name="nuevoMenu_may09_r1_c1" src="img/nuevoMenu_may09_r1_c1.jpg" width="56" height="26" border="0" id="nuevoMenu_may09_r1_c1" alt="Home" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/Objectives.asp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c3','','img/nuevoMenu_may09_r1_c3_f2.gif',1);"><img name="nuevoMenu_may09_r1_c3" src="img/nuevoMenu_may09_r1_c3.gif" width="75" height="26" border="0" id="nuevoMenu_may09_r1_c3" alt="Objectives" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/Structure.asp" onmouseout="MM_swapImgRestore();MM_menuStartTimeout(200);" onmouseover="MM_menuShowMenu('MMMenuContainer0127165513_0', 'MMMenu0127165513_0',0,26,'nuevoMenu_may09_r1_c5');MM_swapImage('nuevoMenu_may09_r1_c5','','img/nuevoMenu_may09_r1_c5_f2.gif',1);"><img name="nuevoMenu_may09_r1_c5" src="img/nuevoMenu_may09_r1_c5.gif" width="90" height="26" border="0" id="nuevoMenu_may09_r1_c5" alt="Structure" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/WorkingGroups.asp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c7','','img/nuevoMenu_may09_r1_c7_f2.gif',1);"><img name="nuevoMenu_may09_r1_c7" src="img/nuevoMenu_may09_r1_c7.gif" width="126" height="26" border="0" id="nuevoMenu_may09_r1_c7" alt="Working Groups" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/Services.asp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c9','','img/nuevoMenu_may09_r1_c9_f2.gif',1);"><img name="nuevoMenu_may09_r1_c9" src="img/nuevoMenu_may09_r1_c9.gif" width="90" height="26" border="0" id="nuevoMenu_may09_r1_c9" alt="Proteomics Services" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/news.asp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c11','','img/nuevoMenu_may09_r1_c11_f2.gif',1);"><img name="nuevoMenu_may09_r1_c11" src="img/nuevoMenu_may09_r1_c11.gif" width="70" height="26" border="0" id="nuevoMenu_may09_r1_c11" alt="News" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/Events.asp" onmouseout="MM_swapImgRestore();MM_menuStartTimeout(200);" onmouseover="MM_menuShowMenu('MMMenuContainer0127170249_2', 'MMMenu0127170249_2',0,26,'nuevoMenu_may09_r1_c13');MM_swapImage('nuevoMenu_may09_r1_c13','','img/nuevoMenu_may09_r1_c13_f2.gif',1);"><img name="nuevoMenu_may09_r1_c13" src="img/nuevoMenu_may09_r1_c13.gif" width="76" height="26" border="0" id="nuevoMenu_may09_r1_c13" alt="Coming Events" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/Tools.asp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c15','','img/nuevoMenu_may09_r1_c15_f2.gif',1);"><img name="nuevoMenu_may09_r1_c15" src="img/nuevoMenu_may09_r1_c15.gif" width="76" height="26" border="0" id="nuevoMenu_may09_r1_c15" alt="Bioinformatics tools" /></a></td>
+   <td valign="top"><p style="margin:0px"></p></td>
+   <td><a href="http://www.proteored.org/Contact.asp" onmouseout="MM_swapImgRestore();" onmouseover="MM_swapImage('nuevoMenu_may09_r1_c17','','img/nuevoMenu_may09_r1_c17_f2.gif',1);"><img name="nuevoMenu_may09_r1_c17" src="img/nuevoMenu_may09_r1_c17.gif" width="91" height="26" border="0" id="nuevoMenu_may09_r1_c17" alt="Contact" /></a></td>
+   <td><img src="img/spacer.gif" width="1" height="26" border="0" alt="" /></td>
+  </tr>
+</table>
+<div id="MMMenuContainer0127165513_0">
+	<div id="MMMenu0127165513_0" onmouseout="MM_menuStartTimeout(200);" onmouseover="MM_menuResetTimeout();">
+		<a href="Structure.asp" id="MMMenu0127165513_0_Item_0" class="MMMIFVStyleMMMenu0127165513_0" onmouseover="MM_menuOverMenuItem('MMMenu0127165513_0');">
+			General&nbsp;Structure
+		</a>
+		<a href="" id="MMMenu0127165513_0_Item_1" class="MMMIVStyleMMMenu0127165513_0" onmouseover="MM_menuOverMenuItem('MMMenu0127165513_0');">
+			Nodes
+		</a>
+		<a href="Proteomicsfacility.asp" id="MMMenu0127165513_0_Item_2" class="MMMIVStyleMMMenu0127165513_0" onmouseover="MM_menuOverMenuItem('MMMenu0127165513_0');">
+			Proteomics&nbsp;Facilities
+		</a>
+		<a href="ManagementBoard.asp" id="MMMenu0127165513_0_Item_3" class="MMMIVStyleMMMenu0127165513_0" onmouseover="MM_menuOverMenuItem('MMMenu0127165513_0');">
+			Management&nbsp;Board
+		</a>
+		<a href="external.asp" id="MMMenu0127165513_0_Item_4" class="MMMIVStyleMMMenu0127165513_0" onmouseover="MM_menuOverMenuItem('MMMenu0127165513_0');">
+			Scientific&nbsp;Advisory&nbsp;Board
+		</a>
+		<a href="UserCommittee.asp" id="MMMenu0127165513_0_Item_5" class="MMMIVStyleMMMenu0127165513_0" onmouseover="MM_menuOverMenuItem('MMMenu0127165513_0');">
+			User&nbsp;Committee
+		</a>
+	</div>
+</div>
+<div id="MMMenuContainer0127170249_2">
+	<div id="MMMenu0127170249_2" onmouseout="MM_menuStartTimeout(200);" onmouseover="MM_menuResetTimeout();">
+		<a href="Events.asp" id="MMMenu0127170249_2_Item_0" class="MMMIFVStyleMMMenu0127170249_2" onmouseover="MM_menuOverMenuItem('MMMenu0127170249_2');">
+			Coming&nbsp;Events
+		</a>
+		<a href="EventsPast.asp" id="MMMenu0127170249_2_Item_1" class="MMMIVStyleMMMenu0127170249_2" onmouseover="MM_menuOverMenuItem('MMMenu0127170249_2');">
+			Past&nbsp;Events
+		</a>
+		
+		<a href="PME.asp" id="MMMenu0127170249_2_Item_2" class="MMMIVStyleMMMenu0127170249_2" onmouseover="MM_menuOverMenuItem('MMMenu0127170249_2');">
+			ProteoRed Multicentric Experiments
+		</a>		
+		
+	</div>
+</div>
+</div>
+
+
+             
+            <img src="../Imagenes/cabeceraPME10.jpg" name="p_imag_principal_pme7" width="760" height="95" border="0" usemap="#p_imag_principal_pme7Map" /> <!-- usemap="#p_imag_principal_pme7Map" />
+          <!--  <map name="m_p_imag_principal_pme6" id="m_p_imag_principal_pme6">
+				<area shape="poly" coords="512,0,760,0,760,95,512,95,512,0" href="http://www.proteored.org/PME6_main.asp" target="_blank" title="ProteoRed Multi-centric Experiment 6 page" alt="ProteoRed Multi-centric Experiment 6 page" />
+			</map> -->
+            <!-- PME5 -->
+			<!--<img name="p_imag_principal_PME5" src="../Imagenes/img/p_imag_principal_PME5.jpg" width="760" height="95" border="0" id="p_imag_principal_PME5" usemap="#m_p_imag_principal_PME5" alt="" />
+			<map name="m_p_imag_principal_PME5" id="m_p_imag_principal_PME5">
+			  <area shape="poly" coords="512,0,760,0,760,95,512,95,512,0" href="http://www.proteored.org/PME5_main.asp" target="_blank" title="See ProteoRed Multi-centric Experiment 5 page" alt="See ProteoRed Multi-centric Experiment 5 page" />
+		    </map>-->
+            
+            <!-- ORIGINAL -->
+			<!--<img src="../Imagenes/p_imag_principal.jpg" width="760" height="95" border="0" />-->
+            <!--A cambiar cuando acabe el experimento multicentro en Marzo de 2010-->
+			<!--<img src="../Imagenes/p_imag_principal_ClinicalProteomics_sept09.jpg" title="Scientific meeting about Clinical Proteomics" width="760" height="95" border="0" />-->
+            
+            <!--A cambiar cuando acabe el congreso de clinical proteomics en Septiembre 2009-->
+			<!--<a href="http://www.proteored.org/Index_clinicalproteomics_sept09.asp"><img src="../Imagenes/p_imag_principal_ClinicalProteomics_sept09.jpg" title="Scientific meeting about Clinical Proteomics" width="760" height="95" border="0" /></a>-->
+
+
+
+		
+<table class="tablaprincipal" width="100%" bgcolor="#F6FBFE">
+				<tr><td height="600" bgcolor="#F6FBFE" valign="top">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+	<tr>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	  <td width="211" valign="top">
+			
+				
+				
+					<!-- Calendario de eventos -->
+					<table width="100%" cellspacing="4" cellpadding="0">
+					
+						<tr>
+							<td width="100%" height="20"><span class="titulo2">Events</span></td>
+						</tr>
+						
+						<tr>
+							<td width="100%">
+								<!-- <div style="float: center; margin-left: 0em; margin-bottom: 0em;width:175px" id="calendar-container"></div> -->
+								<table width="100%" cellspacing="0" cellpadding="0">
+									<tr>
+										<td id="calendar-container" align="center">
+											<script language='JavaScript'>	function Hoy() {		DiaActual = new Date();		document.calendario.Month.value=DiaActual.getMonth()+1;		document.calendario.Year.value=DiaActual.getYear();		document.calendario.submit();	}	function MesAnt() {		MesActual = document.calendario.Month.value;		if (document.calendario.Month.value > 1) 		{		MesActual--; document.calendario.Month.value=MesActual;		document.calendario.Year.value=document.calendario.Year.value;		}		else		{		document.calendario.Month.value=12;		document.calendario.Year.value--;		}		document.calendario.submit();	}	function MesSig() {		MesActual = document.calendario.Month.value;		if (document.calendario.Month.value < 12) 		{		MesActual++; document.calendario.Month.value=MesActual;		document.calendario.Year.value=document.calendario.Year.value;		}		else		{		document.calendario.Month.value=1;		document.calendario.Year.value++;		}		document.calendario.submit();	}	</script><table border='1' cellspacing='1' cellpadding='1' width='100%' align='center' class='calFondoCalendario'>	<tr align='center'> 		<td colspan='7'>			<form name='calendario' action='default.asp#CAL' method='post'>			<table border='0' bordercolor='#000000'  width='100%' class='calFondoEncabe'>				<tr>					<td align='left' class='calDatos'>											<select name='Month' onChange='javascript:document.calendario.submit();' class='calDatos'><option value='1' >January</option><option value='2' >February</option><option value='3' >March</option><option value='4' >April</option><option value='5' >May</option><option value='6' >June</option><option value='7' >July</option><option value='8' >August</option><option value='9' >September</option><option value='10' selected>October</option><option value='11' >November</option><option value='12' >December</option>			            </select>											<select name='Year' onChange='javascript:document.calendario.submit();' class='calDatos'><option value='2006' >2006</option><option value='2007' >2007</option><option value='2008' >2008</option><option value='2009' >2009</option><option value='2010' >2010</option><option value='2011' >2011</option><option value='2012' >2012</option><option value='2013' >2013</option><option value='2014' >2014</option><option value='2015' selected>2015</option><option value='2016' >2016</option><option value='2017' >2017</option><option value='2018' >2018</option><option value='2019' >2019</option><option value='2020' >2020</option><option value='2021' >2021</option><option value='2022' >2022</option><option value='2023' >2023</option><option value='2024' >2024</option><option value='2025' >2025</option>			            </select>					</td>					<td align='right'>						<input type='button' onClick='javascript:MesAnt()' value='<' class='calDatos' alt='Previous month' width='10px'>						<input type='button' onClick='javascript:MesSig()' value='>' class='calDatos' alt='Next month'>					</td>				</tr>			</table>		</td>	</tr>	<tr align='center'> 		<td bgcolor='#afe9ea'><div class='calDias'>L</div></td>		<td bgcolor='#afe9ea'><div class='calDias'>M</div></td>		<td bgcolor='#afe9ea'><div class='calDias'>X</div></td>		<td bgcolor='#afe9ea'><div class='calDias'>J</div></td>		<td bgcolor='#afe9ea'><div class='calDias'>V</div></td>		<td bgcolor='#afe9ea'><div class='calDias'>S</div></td>		<td bgcolor='#afe9ea'><div class='calDias'>D</div></td>	</tr><tr><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=1&month=10&year=2015'><div class='calSimbolo'>1</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=2&month=10&year=2015'><div class='calSimbolo'>2</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=3&month=10&year=2015'><div class='calFindeSemana'>3</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=4&month=10&year=2015'><div class='calFindeSemana'>4</div></a></td></tr><tr><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=5&month=10&year=2015'><div class='calSimbolo'>5</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=6&month=10&year=2015'><div class='calSimbolo'>6</div></a></td><td bgcolor='#FFFFFF' class='calCeldaResaltadoHoy' align='center'><a class='dia' href='Events.asp#EV?day=7&month=10&year=2015'><div class='calResaltadoHoy'>7</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=8&month=10&year=2015'><div class='calSimbolo'>8</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=9&month=10&year=2015'><div class='calSimbolo'>9</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=10&month=10&year=2015'><div class='calFindeSemana'>10</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=11&month=10&year=2015'><div class='calFindeSemana'>11</div></a></td></tr><tr><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=12&month=10&year=2015'><div class='calSimbolo'>12</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=13&month=10&year=2015'><div class='calSimbolo'>13</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=14&month=10&year=2015'><div class='calSimbolo'>14</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=15&month=10&year=2015'><div class='calSimbolo'>15</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=16&month=10&year=2015'><div class='calSimbolo'>16</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=17&month=10&year=2015'><div class='calFindeSemana'>17</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=18&month=10&year=2015'><div class='calFindeSemana'>18</div></a></td></tr><tr><td bgcolor='red' class='calCeldaResaltado5' align='center'><a class='dia' href='Events.asp#EV?day=19&month=10&year=2015'><a href='Events.asp#EV20151019' onmouseover=cambiaLabel('III\u0020CURSO\u0020PRÁCTICO\u0020DE\u0020PROTEÓMICA','Courses');><div class='calResaltado'>19</div></a></td><td bgcolor='red' class='calCeldaResaltado5' align='center'><a class='dia' href='Events.asp#EV?day=20&month=10&year=2015'><a href='Events.asp#EV20151020' onmouseover=cambiaLabel('III\u0020CURSO\u0020PRÁCTICO\u0020DE\u0020PROTEÓMICA','Courses');><div class='calResaltado'>20</div></a></td><td bgcolor='red' class='calCeldaResaltado5' align='center'><a class='dia' href='Events.asp#EV?day=21&month=10&year=2015'><a href='Events.asp#EV20151021' onmouseover=cambiaLabel('III\u0020CURSO\u0020PRÁCTICO\u0020DE\u0020PROTEÓMICA','Courses');><div class='calResaltado'>21</div></a></td><td bgcolor='red' class='calCeldaResaltado5' align='center'><a class='dia' href='Events.asp#EV?day=22&month=10&year=2015'><a href='Events.asp#EV20151022' onmouseover=cambiaLabel('III\u0020CURSO\u0020PRÁCTICO\u0020DE\u0020PROTEÓMICA','Courses');><div class='calResaltado'>22</div></a></td><td bgcolor='red' class='calCeldaResaltado5' align='center'><a class='dia' href='Events.asp#EV?day=23&month=10&year=2015'><a href='Events.asp#EV20151023' onmouseover=cambiaLabel('III\u0020CURSO\u0020PRÁCTICO\u0020DE\u0020PROTEÓMICA','Courses');><div class='calResaltado'>23</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=24&month=10&year=2015'><div class='calFindeSemana'>24</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=25&month=10&year=2015'><div class='calFindeSemana'>25</div></a></td></tr><tr><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=26&month=10&year=2015'><div class='calSimbolo'>26</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=27&month=10&year=2015'><div class='calSimbolo'>27</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=28&month=10&year=2015'><div class='calSimbolo'>28</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=29&month=10&year=2015'><div class='calSimbolo'>29</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=30&month=10&year=2015'><div class='calSimbolo'>30</div></a></td><td bgcolor='#FFFFFF' align='center'><a class='dia' href='Events.asp#EV?day=31&month=10&year=2015'><div class='calFindeSemana'>31</div></a></td><td bgcolor='#FFFFFF' class='calSimbolo'><div class='calFindeSemana'>&nbsp;</div></td></tr><tr><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'>&nbsp;</td><td bgcolor='#FFFFFF' class='calSimbolo'><div class='calFindeSemana'>&nbsp;</div></td><td bgcolor='#FFFFFF' class='calSimbolo'><div class='calFindeSemana'>&nbsp;</div></td></tr><tr><td colspan='7' align='left' class='calFondoResaltado'><div class='tipo_Evento_blanco'>Event type:</div></td></tr><tr><td colspan='7' align='center' class='calFondoResaltado'><input  type='text' disabled='disabled' name='TIPOEVENTO' size='30' class='tipo_evento_negro'></input></td></tr><tr><td colspan='7' align='left'  class='calFondoResaltado'><div class='titulo2_blanco'>Title:</div></td></tr><tr><td colspan='7' align='center' class='calFondoResaltado'><textarea  readonly name='EVENTO'  class='negrita' cols=30 rows=4></textarea></td></tr><tr><td colspan='7' align='left' class='calFondoResaltado'><a href='Events.asp#EV0:001019' class='titulo2_blanco'>Next event on Oct 19th, 2015:</a></td></tr><tr><td colspan='7' align='center' class='calFondoEncabe'><textarea readonly name='PROXIMOEVENTO' cols=30 rows=3 class='negrita'>III CURSO PRÁCTICO DE PROTEÓMICA</textarea></td></tr></table></form>
+										</td>
+									</tr>
+								</table>
+								<table width="100%" border='0'>
+									<tr>
+										<td align="right" height="15"><a href="events.asp" class="enlacePie"><img src="Imagenes/p_moreinfo.gif" alt="" width="33" height="9" border="0"></a></td>
+									</tr>
+								</table>
+									
+								
+							</td>
+						</tr>
+						<tr>
+						<td>
+						</td>
+						</tr>
+					</table>						
+					<!-- Fin Calendario de eventos -->
+				
+
+			
+      </td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+		
+		<td width="324" valign="top">
+			<table width="100%" cellspacing="4" cellpadding="0">
+				<tr>
+					<td>&nbsp; </td>
+				</tr>
+				<tr>
+					<td><a href="ProteoRedInfo.asp"><span class="titulo1">Spanish Proteomics</span><span class="titulo2"> Facilities</span></a></td>
+				</tr>					
+<!-- 				<tr>
+					<td><img src="Imagenes/p_mapa.jpg" alt="" width="324" height="304" border="0"></td>
+				</tr> -->
+				<tr>
+					<td>
+<img src="mapa_small2.jpg" width="324" height="304" border="0" usemap="#Map">
+					<!--text used in the movie--></td>
+				</tr>
+			</table>
+		</td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	  <td width="185" height="324" valign="top">
+		<table><tr>
+					<td height="20"><span class="titulo1">Proteo</span><span class="titulo2">Red</span><span class="titulo1">- ISCIII</span></td>
+				</tr>			
+				<tr>
+					<td>
+						<div align="left">Carlos III Networked Proteomics Platform, ProteoRed-ISCIII is a National Network for the coordination, integration and development of the Spanish Proteomics Facilities providing proteomics services for supporting Spanish researchers in the field of proteomics.<br>										
+				    </div></td>
+				</tr>
+				<tr>
+					<td align="right"><a href="ProteoRedInfo.asp"><img src="Imagenes/p_moreinfo.gif" alt="" width="34" height="9" border="0"></a>&nbsp;</td>
+				</tr></table>
+				
+		
+		<table width="100%" cellspacing="4" cellpadding="0">
+			<tr>
+				<td><span class="titulo1">Last</span> <span class="titulo2">News</span></td>
+			</tr>
+		</table>
+		
+	<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">
+		<tr>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_sup_izq.gif" alt="" width="14" height="15" border="0"></td>
+			<td width="177" valign="top" height="15" background="../Imagenes/p_puntitos_news_horiz.gif"></td>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_sup_der.gif" alt="" width="14" height="15" border="0"></td>
+		</tr>
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">
+		<tr>
+			<td rowspan="2" width="1" valign="top" align="left" background="../Imagenes/p_puntitos_news_vert.gif"></td>
+			<td valign="top" width="203"></td>
+			<td rowspan="2" width="1" valign="top" align="left" background="../Imagenes/p_puntitos_news_vert.gif"></td>
+		</tr>
+		<tr>
+			<td width="99%" height=124" valign="top">
+				<table width="100%" cellspacing="4" cellpadding="0" height=124">
+				
+					<tr>
+						<td colspan="2"> 
+							
+							<b>Two positions in Proteomics/Metabolomics available at Sp...</b>
+						</td>
+					</tr>
+					<tr>
+						<!-- <td>&nbsp;</td> -->
+												
+						<td colspan="2"><a href="News.asp" class="enlacePie">&nbsp;These positions will be available in the “Protemics...</a><br><br></td>
+					</tr>
+				
+					<tr>
+						<td colspan="2"> 
+							
+							<b>Resolución becas para curso UIMP</b>
+						</td>
+					</tr>
+					<tr>
+						<!-- <td>&nbsp;</td> -->
+												
+						<td colspan="2"><a href="News.asp" class="enlacePie">&nbsp;Resolución becas para curso UIMP</a><br><br></td>
+					</tr>
+				
+					
+				</table>														
+			</td>
+		</tr>
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">			
+		<tr>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_inf_izq.gif" alt="" width="14" height="15" border="0"></td>
+			<td width="177" height="15" valign="top" background="../Imagenes/p_puntitos_news_horiz2.gif"></td>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_inf_der.gif" alt="" width="14" height="15" border="0"></td>
+		</tr>				
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="right" height="15"><a href="News.asp"><img src="../Imagenes/p_more_info.gif" alt="" width="34" height="9" border="0"></a></td>
+		</tr>
+	</table>
+<!-- 	<table width="100%" cellspacing="4" cellpadding="0">
+		<tr>
+			<td><span class="titulo1">Links</span></td>
+		</tr>
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">
+		<tr>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_sup_izq.gif" alt="" width="14" height="15" border="0"></td>
+			<td width="177" valign="top" height="15" background="../Imagenes/p_puntitos_news_horiz.gif"></td>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_sup_der.gif" alt="" width="14" height="15" border="0"></td>
+		</tr>
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">
+		<tr>
+			<td rowspan="2" width="1" valign="top" align="left"  background="../Imagenes/p_puntitos_news_vert.gif"></td>
+			<td valign="top" width="203"></td>
+			<td rowspan="2" width="1" valign="top" align="left" background="../Imagenes/p_puntitos_news_vert.gif"></td>
+		</tr>
+		<tr>
+			<td width="203" height="95" valign="top">
+				<table width="100%" cellspacing="4" cellpadding="0" height=95">
+					<tr>
+						<td valign="middle"> 
+							<a href="http://proteored.blogspot.com/" class="enlacePie" target="_blank"><b>Blog</b>&nbsp;<img src="../Imagenes/ico_blog.gif" alt="" width="16" height="16" border="0"></a>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<a href="Customised.asp" class="enlacePie"><b>Customised advising</b></a>
+						</td>
+					</tr>
+					<tr>
+						<td> 
+							<a href="Comments.asp" class="enlacePie"><b>Comments</b></a>
+						</td>
+					</tr>	
+					<tr>
+						<td> 
+							<a href="Links.asp" class="enlacePie"><b>Links of interest</b></a>
+						</td>
+					</tr>	
+				</table>															
+			</td>
+		</tr>
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">			
+		<tr>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_inf_izq.gif" alt="" width="14" height="15" border="0"></td>
+			<td width="177" height="15" valign="top" background="../Imagenes/p_puntitos_news_horiz2.gif"></td>
+			<td width="14" valign="top"><img src="../Imagenes/p_esq_news_inf_der.gif" alt="" width="14" height="15" border="0"></td>
+		</tr>				
+	</table> -->
+	
+
+							
+							
+			
+	  </td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	</tr>
+	<tr><td colspan="7"></td></tr>
+	<tr>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	  <td width="211" valign="top">
+			
+	<script type="text/javascript" language="JavaScript1.2" src="Framework/stm31.js"></script>
+		<table width="200" cellspacing="0" cellpadding="0" border="0"> 
+		<tr>
+			<td colspan="3" height="23" background="../Imagenes/p_cabec_servic.gif">&nbsp;&nbsp;<span class="tituloservices">Services</span></td>		
+		</tr>
+		<tr>
+			<td colspan="3" width="100%" bgcolor="#34AFD1">
+	<script type="text/javascript" language="JavaScript1.2">
+		stm_bm(["tubtehr",400,"","../Imagenes/blank.gif",0,"","transparent",0,0,250,0,1000,1,0,0]);
+		stm_bp("p0",[1,4,0,0,0,2,12,7,100,"",-2,"",-2,90,0,0,"","#34AFD1","",3,1,1,"#34AFD1"]);
+		stm_ai("p0i0",[0,"","","",-1,-1,0,"","_self","","","","",0,0,0,"","",0,0,0,0,1,"#34AFD1",0,"#34AFD1",0,"","",3,3,0,0,"#ffffff","#ffffff","#FFFFFF","#FFFFFF","bold 7pt Verdana","bold 7pt Verdana",0,0]);
+		stm_ai("p0i1",[6,1,"#34AFD1","",0,0,0]);
+		
+				stm_aix("p0i4","p0i0",[1,"Protein and Peptide Molecular  ...","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p1","p0",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p2i0","p0i4",[1,"Molecular weight analysis by MS-MALDI TOF","","",-1,-1,0,"Services.asp#9","_self","Services.asp#9","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p2i1","p0i1",[]);
+                    
+                    stm_aix("p2i2","p0i4",[1,"Molecular weight analysis by ESI by MS-QTOF or MS-ION TRAP","","",-1,-1,0,"Services.asp#11","_self","Services.asp#11","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p2i3","p0i1",[]);
+                    
+                    stm_aix("p2i4","p0i4",[1,"Molecular weight analysis by MS-SELDI TOF","","",-1,-1,0,"Services.asp#12","_self","Services.asp#12","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p2i5","p0i1",[]);
+                    
+                    stm_aix("p2i6","p0i4",[1,"Protein Profile Analysis using MS-SELDI-TOF","","",-1,-1,0,"Services.asp#62","_self","Services.asp#62","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p2i7","p0i1",[]);
+                    
+                    stm_aix("p2i8","p0i4",[1,"Molecular weight analysis by MS-NALDI TOF","","",-1,-1,0,"Services.asp#80","_self","Services.asp#80","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p2i9","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i5","p0i1",[]);
+				
+				stm_aix("p0i6","p0i0",[1,"Protein Identification","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p2","p1",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p3i0","p0i4",[1,"Peptide Mass Fingerprinting by MS-MALDI TOF","","",-1,-1,0,"Services.asp#14","_self","Services.asp#14","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i1","p0i1",[]);
+                    
+                    stm_aix("p3i2","p0i4",[1,"Peptide Mass Fingerprinting by MS-MALDI-TOF employing Ultra Fast Trypsin Digestion","","",-1,-1,0,"Services.asp#79","_self","Services.asp#79","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i3","p0i1",[]);
+                    
+                    stm_aix("p3i4","p0i4",[1,"Peptide Mass Fingerprint by MS-SELDI TOF","","",-1,-1,0,"Services.asp#43","_self","Services.asp#43","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i5","p0i1",[]);
+                    
+                    stm_aix("p3i6","p0i4",[1,"Peptide Mass Fingerprinting MS - MS/MS by MALDI TOF/TOF","","",-1,-1,0,"Services.asp#15","_self","Services.asp#15","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i7","p0i1",[]);
+                    
+                    stm_aix("p3i8","p0i4",[1,"Protein Identification by LC-MS/MS (<5 Proteins)","","",-1,-1,0,"Services.asp#18","_self","Services.asp#18","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i9","p0i1",[]);
+                    
+                    stm_aix("p3i10","p0i4",[1,"Protein Identification by LC-MS/MS (<50 proteins)","","",-1,-1,0,"Services.asp#19","_self","Services.asp#19","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i11","p0i1",[]);
+                    
+                    stm_aix("p3i12","p0i4",[1,"Protein Identification by LC/MS/MS (>50 proteins)","","",-1,-1,0,"Services.asp#78","_self","Services.asp#78","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i13","p0i1",[]);
+                    
+                    stm_aix("p3i14","p0i4",[1,"Protein Identification by LC-MALDI TOF/TOF","","",-1,-1,0,"Services.asp#46","_self","Services.asp#46","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i15","p0i1",[]);
+                    
+                    stm_aix("p3i16","p0i4",[1,"Protein Identification by 2D LC-MS/MS (2 - 5 fractions)","","",-1,-1,0,"Services.asp#20","_self","Services.asp#20","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i17","p0i1",[]);
+                    
+                    stm_aix("p3i18","p0i4",[1,"Protein Identificacion by 2D LC-MS/MS (>5 fractions)","","",-1,-1,0,"Services.asp#47","_self","Services.asp#47","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i19","p0i1",[]);
+                    
+                    stm_aix("p3i20","p0i4",[1,"Protein Identification by nESI-MS/MS (off-line)","","",-1,-1,0,"Services.asp#16","_self","Services.asp#16","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p3i21","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i7","p0i1",[]);
+				
+				stm_aix("p0i8","p0i0",[1,"Characterization and protein m ...","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p3","p2",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p4i0","p0i4",[1,"Identification of post-translational Modifications","","",-1,-1,0,"Services.asp#21","_self","Services.asp#21","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p4i1","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i9","p0i1",[]);
+				
+				stm_aix("p0i10","p0i0",[1,"Sequencing","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p4","p3",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p5i0","p0i4",[1,"Edman Protein Sequencing","","",-1,-1,0,"Services.asp#24","_self","Services.asp#24","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p5i1","p0i1",[]);
+                    
+                    stm_aix("p5i2","p0i4",[1,"Peptide Sequencing by MALDI TOF/TOF","","",-1,-1,0,"Services.asp#23","_self","Services.asp#23","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p5i3","p0i1",[]);
+                    
+                    stm_aix("p5i4","p0i4",[1,"De novo sequencing","","",-1,-1,0,"Services.asp#66","_self","Services.asp#66","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p5i5","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i11","p0i1",[]);
+				
+				stm_aix("p0i12","p0i0",[1,"Electrophoresis","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p5","p4",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p6i0","p0i4",[1,"1D Electrophoresis IEF","","",-1,-1,0,"Services.asp#26","_self","Services.asp#26","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p6i1","p0i1",[]);
+                    
+                    stm_aix("p6i2","p0i4",[1,"1D Electrophoresis SDS-PAGE","","",-1,-1,0,"Services.asp#48","_self","Services.asp#48","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p6i3","p0i1",[]);
+                    
+                    stm_aix("p6i4","p0i4",[1,"2D Electrophoresis","","",-1,-1,0,"Services.asp#28","_self","Services.asp#28","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p6i5","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i13","p0i1",[]);
+				
+				stm_aix("p0i14","p0i0",[1,"Differential Proteomics","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p6","p5",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p7i0","p0i4",[1,"2D-DIGE","","",-1,-1,0,"Services.asp#29","_self","Services.asp#29","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p7i1","p0i1",[]);
+                    
+                    stm_aix("p7i2","p0i4",[1,"Labeling for ITRAQ ","","",-1,-1,0,"Services.asp#64","_self","Services.asp#64","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p7i3","p0i1",[]);
+                    
+                    stm_aix("p7i4","p0i4",[1,"Other quantitative mass spectrometry","","",-1,-1,0,"Services.asp#65","_self","Services.asp#65","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p7i5","p0i1",[]);
+                    
+                    stm_aix("p7i6","p0i4",[1,"Quantitative proteomics","","",-1,-1,0,"Services.asp#67","_self","Services.asp#67","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p7i7","p0i1",[]);
+                    
+                    stm_aix("p7i8","p0i4",[1,"Image Analysis ","","",-1,-1,0,"Services.asp#33","_self","Services.asp#33","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p7i9","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i15","p0i1",[]);
+				
+				stm_aix("p0i16","p0i0",[1,"Peptide Synthesis","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p7","p6",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p8i0","p0i4",[1,"Peptide Synthesis","","",-1,-1,0,"Services.asp#38","_self","Services.asp#38","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p8i1","p0i1",[]);
+                    
+                    stm_aix("p8i2","p0i4",[1,"Peptide Arrays up 360 deca-/dodeca peptides","","",-1,-1,0,"Services.asp#49","_self","Services.asp#49","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p8i3","p0i1",[]);
+                    
+                    stm_aix("p8i4","p0i4",[1,"Peptide antigen design","","",-1,-1,0,"Services.asp#59","_self","Services.asp#59","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p8i5","p0i1",[]);
+                    
+                    stm_aix("p8i6","p0i4",[1,"Coupling to carriers (KLH, OVA, BSA)","","",-1,-1,0,"Services.asp#60","_self","Services.asp#60","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p8i7","p0i1",[]);
+                    
+                    stm_aix("p8i8","p0i4",[1,"Antibody purification","","",-1,-1,0,"Services.asp#61","_self","Services.asp#61","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p8i9","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i17","p0i1",[]);
+				
+				stm_aix("p0i18","p0i0",[1,"Staining","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p8","p7",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p9i0","p0i4",[1,"Silver Gel Staining","","",-1,-1,0,"Services.asp#42","_self","Services.asp#42","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p9i1","p0i1",[]);
+                    
+                    stm_aix("p9i2","p0i4",[1,"Coomassie Gel Staining","","",-1,-1,0,"Services.asp#50","_self","Services.asp#50","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p9i3","p0i1",[]);
+                    
+                    stm_aix("p9i4","p0i4",[1,"Fluorescence Staining","","",-1,-1,0,"Services.asp#51","_self","Services.asp#51","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p9i5","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i19","p0i1",[]);
+				
+				stm_aix("p0i20","p0i0",[1,"Bioinformatics tools","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p9","p8",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p10i0","p0i4",[1,"Image Analysis Tools","","",-1,-1,0,"Services.asp#34","_self","Services.asp#34","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p10i1","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i21","p0i1",[]);
+				
+				stm_aix("p0i22","p0i0",[1,"Gluten Analysis","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p10","p9",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p11i0","p0i4",[1,"Quantification by competitive R5 ELISA","","",-1,-1,0,"Services.asp#70","_self","Services.asp#70","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p11i1","p0i1",[]);
+                    
+                    stm_aix("p11i2","p0i4",[1,"Identification and Characterization - Western Blot R5","","",-1,-1,0,"Services.asp#71","_self","Services.asp#71","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p11i3","p0i1",[]);
+                    
+                    stm_aix("p11i4","p0i4",[1,"Identification and Characterization - Real Time PCR","","",-1,-1,0,"Services.asp#72","_self","Services.asp#72","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p11i5","p0i1",[]);
+                    
+                    stm_aix("p11i6","p0i4",[1,"Identification and Characterization - Mass Spec. MALDI-TOF","","",-1,-1,0,"Services.asp#73","_self","Services.asp#73","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p11i7","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i23","p0i1",[]);
+				
+				stm_aix("p0i24","p0i0",[1,"Sample Preparation","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p11","p10",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p12i0","p0i4",[1,"Desalting and concentration by Zip-Tip","","",-1,-1,0,"Services.asp#41","_self","Services.asp#41","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p12i1","p0i1",[]);
+                    
+                    stm_aix("p12i2","p0i4",[1,"Sample precipitation","","",-1,-1,0,"Services.asp#76","_self","Services.asp#76","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p12i3","p0i1",[]);
+                    
+                    stm_aix("p12i4","p0i4",[1,"Automated protein sample preparation with automated trypsin digestion and processing for MALDI ..","","",-1,-1,0,"Services.asp#81","_self","Services.asp#81","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p12i5","p0i1",[]);
+                    
+				stm_ep();
+				stm_aix("p0i25","p0i1",[]);
+				
+				stm_aix("p0i26","p0i0",[1,"Other Services","","",-1,-1,0,"","_self","","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#018390",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+			
+			
+			
+			stm_bpx("p12","p11",[1,2,-10,18,0,3,12,0,100,"",-2,"",-2,100,0,0,"#34AFD1","#4fbdd9"]);
+			
+                    stm_aix("p13i0","p0i4",[1,"Gel Scanning","","",-1,-1,0,"Services.asp#44","_self","Services.asp#44","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p13i1","p0i1",[]);
+                    
+                    stm_aix("p13i2","p0i4",[1,"Protein Separation by HPLC","","",-1,-1,0,"Services.asp#58","_self","Services.asp#58","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p13i3","p0i1",[]);
+                    
+                    stm_aix("p13i4","p0i4",[1,"Microorganism identification","","",-1,-1,0,"Services.asp#74","_self","Services.asp#74","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p13i5","p0i1",[]);
+                    
+                    stm_aix("p13i6","p0i4",[1,"Electroblotting ","","",-1,-1,0,"Services.asp#77","_self","Services.asp#77","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p13i7","p0i1",[]);
+                    
+                    stm_aix("p13i8","p0i4",[1,"Other services","","",-1,-1,0,"Services.asp#68","_self","Services.asp#68","","../Imagenes/p_puntito_blanco.gif","../Imagenes/libre.gif",5,5,0,"../Imagenes/arrow_r.gif","../Imagenes/arrow_gray.gif",0,0,0,0,1,"#34AFD1",1,"#34AFD1",0,"","",3,3,0,0,"white","white","white","#000000","7pt Verdana","7pt Verdana"]);	
+                    
+                    stm_aix("p13i9","p0i1",[]);
+                    
+		stm_ep();
+		stm_em();
+	</script>	
+			</td>
+		</tr>
+		<tr>
+			<td width="8"><img src="../Imagenes/p_esq_servic_inf_izq.gif" alt="" width="8" height="8" border="0"></td>
+			<td height="8" bgcolor="#34AFD1" width="290"></td>
+			<td width="8" align="right"><img src="../Imagenes/p_esq_servic_inf_der.gif" alt="" width="8" height="8" border="0"></td>
+		</tr>
+	</table>
+<br>
+            <div id="EUPA"><center><!-- <a href="http://www.proteored.org/Index_ChromatographyCourse_Nov14.asp" title="IV Reunión Científica sobre Proteómica Clínica" target="_blank"><img src="botonCromatography2.gif" align="absmiddle"></a>-->
+              <a href="homenajeJuanPablo.asp"><img src="homenaje_JP.gif" width="200" height="284"></a>
+            </center>
+      
+            </div></td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+		<td width="324" rowspan="2" valign="top">
+		  
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td height="23"><img src="../Imagenes/p_esq_work_sup_izq.gif" alt="" width="8" height="23" border="0"></td>
+			<td bgcolor="#82CAE0" width="100%"><span class="tituloworking">Proteomics</span><span class="tituloservices"> Facility</span></td>
+			<td height="23"><img src="../Imagenes/p_esq_work_sup_der.gif" alt="" width="8" height="23" border="0"></td>
+		</tr>
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="5">
+		<tr>
+			<td width="100%" bgcolor="#E1F2F9">
+				<table width="100%" cellspacing="5" cellpadding="0">
+					<tr>
+						<td width="100%">
+							<table >
+								<tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro Nacional de Biotecnología, CSIC <br>
+									Person in charge:<font color="#00a7c3">Alberto Paradela</font><font color="#FF0000"><a href="http://www.cnb.csic.es/index.php/en/servicios/115-proteomica.html" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br>
+									<br>
+								  </div></td>
+								</tr>
+								<tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro de Biología Molecular Severo Ochoa, CSIC<br>
+									Person in charge: <font color="#00a7c3">Anabel Marina</font><font color="#FF0000"><a href="http://www2.cbm.uam.es/proteomica/index.htm" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br><br/>
+									
+								  </div></td>
+								</tr> 
+								<tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro de Investigaciones Biológicas, CSIC <br>
+									Person in charge: <font color="#00a7c3">Ignacio Casal</font><font color="#FF0000"><a href="http://www.cib.csic.es/es/servicio.php?iddepartamento=29" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br><br />
+									
+								  </div></td>
+								</tr>
+							 	<tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Bioinformática - Centro Nacional de Biotecnología, CSIC <br>
+									Person in charge: <font color="#00a7c3">Alberto Pascual-Montano</font><font color="#FF0000"><a href="http://bioinfo.cnb.csic.es/" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+									<br><br />
+								  </div></td>
+								</tr>
+								<tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro Nacional de Investigaciones Cardiovasculares Carlos III<br>
+									Person in charge: <font color="#00a7c3">Jesús M Vázquez</font><font color="#FF0000"><a href="https://www.cnic.es/es/unidades/proteomica/" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br />
+									<br>
+								  </div></td>
+								</tr>
+								<tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Universidad Complutense de Madrid<br>
+									Person in charge: <font color="#00a7c3">Concha Gil</font><font color="#FF0000"><a href="http://www.ucm.es/gyp/proteomica" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br />
+									<br>
+								  </div></td>
+								</tr>
+                                <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro de Investigación Cooperativa en Biociencias (CIC bioGUNE)<br>
+									Person in charge: <font color="#00a7c3">Felix Elortza</font><font color="#FF0000"><a href="http://www.cicbiogune.es/services/index.php?servicio=1&info=19" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>
+                                
+                                <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro de Investigación Médica Aplicada (en colaboración con Navarrabiomed)<br>
+									Person in charge: <font color="#00a7c3">Fernando J Corrales</font><font color="#FF0000"><a href="http://cima.es" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>
+                                
+                                
+                               <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Universidad del País Vasco<br>
+									Person in charge: <font color="#00a7c3">Jesus Mari Arizmendi</font><font color="#FF0000"><a href="http://www.ikerkuntza.ehu.es/p273-proteoct/es/contenidos/informacion/sgiker_proteomica/es_proteomi/presentacion.html" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+							  </tr>
+                                
+                               <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro de Regulación Genómica <br>
+									Person in charge: <font color="#00a7c3">Eduard Sabidó</font><font color="#FF0000"><a href="http://www.crg.eu/en/core/programmes-groups/crgupf-proteomics-unit" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+							  </tr>                                
+                                
+                              <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto de Investigaciones Biom&eacute;dicas de Barcelona,CSIC - IibB<br>
+									Person in charge: <font color="#00a7c3">Joaquín Abián</font><font color="#FF0000"><a href="http://proteomica.uab.cat/" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+							  </tr>    
+                                
+                              <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Parque Científico de Barcelona<br>
+									Person in charge: <font color="#00a7c3">Eliandre de Oliveira</font><font color="#FF0000"><a href="http://www.pcb.ub.edu/portal/" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+							  </tr>                                 
+                                
+                              <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto de investigación Oncológica Vall d´Hebron<br>
+									Person in charge: <font color="#00a7c3">Francesc Canals</font><font color="#FF0000"><a href="http://www.vhio.net/research/core-technologies/proteomics-group/es_index.php" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br />
+									<br>
+								  </div></td>
+							  </tr>   
+                                
+                              <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro de Investigación del Cáncer<br>
+									Person in charge: <font color="#00a7c3">Manuel Fuentes</font><font color="#FF0000"><a href="http://www.cicancer.org/es/unidad-de-proteomica" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+							  </tr>                                                               
+
+                              <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto de Investigación Biomédica de A Coruña<br>
+									Person in charge: <font color="#00a7c3">Francisco J Blanco</font><font color="#FF0000"><a href="http://www.inibic.es/inv_apoyo_proteomica.html" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br />
+									<br>
+								  </div></td>
+							  </tr>
+                                <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Universidad de Valencia<br>
+									Person in charge: <font color="#00a7c3">Manuel Sánchez del Pino</font><font color="#FF0000"><a href="http://www.uv.es/uvweb/servicio-central-soporte-investigacion-experimental/es/scsie/secciones/proteomica/presentacion-1285876921913.html" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>                                                  
+                                <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Centro Nacional de Investigaciones Oncológicas<br>
+									Person in charge: <font color="#00a7c3">Javier Muñoz</font><font color="#FF0000"><a href="http://www.cnio.es/es/grupos/plantillas/presentacion.asp?grupo=50006917" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font><br />
+									<br>
+								  </div></td>
+								</tr>                                
+                                
+                                 <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Fundación Jiménez Díaz (en colaboración con el Hospital Nacional de Parapléjicos)<br>
+									Person in charge: <font color="#00a7c3">Fernando Vivanco</font><font color="#FF0000"><a href="http://www.fjd.es/iis_fjd/es/areas-grupos-investigacion/enfermedades-infecciosas-inflamatorias-cronicas/alergia-inmunologia" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>  
+                                
+                                 <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto de Investigación Biomédica de Bellvitge (en colaboración con el Instituto Aragonés de Ciencias de la Salud)<br>
+									Person in charge: <font color="#00a7c3">Silvia Barceló</font><font color="#FF0000"><a href="http://www.idibell.cat/modul/proteomica/es" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>   
+                                
+                                 <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto de Investigaci&oacute;n Biom&eacute;dica Barcelona - IRB Barcelona<br>
+									Person in charge: <font color="#00a7c3">Marta Vilaseca</font><font color="#FF0000"><a href="http://www.irbbarcelona.org/index.php/es/research/platforms/mass-spectrometry-core-facility/mass-spectrometry-core-facility" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>                                   
+                                <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Universidad de Barcelona<br>
+									Person in charge: <font color="#00a7c3">Oriol Bachs</font><font color="#FF0000"><a href="http://www.idibaps.org/core-facilities/15/proteomics-unit-idibaps-ub-pcb-core-facility" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+								</tr>      
+                                
+                               <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto de Parasitología y Biomedicina "López-Neyra", CSIC<br>
+									Person in charge: <font color="#00a7c3">Jaime Sancho</font><font color="#FF0000"><a href="http://www.ipb.csic.es/servicios/Proteomica/index.html" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+<br />									<br>
+								  </div></td>
+							  </tr>      
+                                
+                               <tr>
+									<td valign="top"><img src="../Imagenes/p_num_00.gif" alt="" width="13" height="13" border="0"></td>
+									<td><div align="justify">Instituto Maimónides de Investigación Biomédica de Córdoba<br>
+									Person in charge: <font color="#00a7c3">José A Bárcena</font><font color="#FF0000"><a href="http://www.imibic.org/serviciosexternos/detalle/id/8/ucaib/prote%C3%B3mica" target="_blank" style="text-decoration:none; color:#F00">&nbsp;[Visit]</a></font>
+									<br>
+								  </div></td>
+							  </tr>                                
+                                                                                                      
+                                                                                           
+                                 
+                                
+                                
+                                
+ 
+ 
+                                                               
+                                
+                                
+							</table>
+							
+							
+						</td>
+					</tr>
+					<tr>
+						<td align="right">&nbsp;</td>
+					</tr>
+				</table>														
+			</td>
+		</tr>	
+	</table>
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td height="17"><img src="../Imagenes/p_esq_work_inf_izq.gif" alt="" width="17" height="17" border="0"></td>
+			<td bgcolor="#E1F2F9" width="100%"></td>
+			<td height="17"><img src="../Imagenes/p_esq_work_inf_der.gif" alt="" width="17" height="17" border="0"></td>
+		</tr>		
+	</table>
+
+		</td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	  <td width="185" valign="top">
+			<div align="center">
+			  		      <a href="MIAPEtool.asp"><img src="miapegeneratortool3.gif" width="142" height="92" border="0" longdesc="Miape Generator Tool"></a>
+    
+	<!--<form name="login" method="post" action="Framework/confirmacion.asp?pmArea=&pmAreaId=&pmAreaTipo=&pmIdLabServ=">-->
+    <form name="login" method="post" action="Framework/confirmacion.asp?pmArea=3&pmAreaId=0&pmAreaTipo=0&pmIdLabServ=0">
+
+    
+	
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+		<td>To ask for a service, or to use<br> the MIAPE generator tool<br> please log on<br></td>
+		</tr>
+		<tr>
+			<td><span class="titulo2">Login</span></td>
+		</tr>
+		<tr>
+			<td width="100%" height="2" bgcolor="#07A8C4"></td>
+		</tr>			
+	</table>
+    
+    
+    	
+	<table width="100%" cellspacing="4" cellpadding="0" bgcolor="#FFFFFF">
+		<tr>
+			<td bgcolor="#FFFFFF"><table><tr><td><img src="../Imagenes/p_puntito_azul.gif" alt="" width="5" height="5" border="0"></td><td>&nbsp;User</td></tr></table></td>		
+		</tr>
+		<tr>
+			<td bgcolor="#FFFFFF"><input class="login" type="text" name="pmUsuario" value="guest" size="25" maxlength="50"></td>		
+		</tr>		
+		<tr>
+			<td bgcolor="#FFFFFF"><table><tr><td><img src="../Imagenes/p_puntito_azul.gif" alt="" width="5" height="5" border="0"></td><td>&nbsp;Password</td></tr></table></td>		
+		</tr>
+		<tr>
+			<td bgcolor="#FFFFFF"><input class="login" type="password" name="pmPassword" value="" size="25" maxlength="25"></td>		
+		</tr>	
+		<input type="hidden" name="pmAccion" value="">
+		<input type="hidden" name="pmArea" value="3">
+		<input type="hidden" name="pmAreaId" value="0">	
+		<input type="hidden" name="pmAreaTipo" value="0">
+		<input type="hidden" name="pmIdLabServ" value="0">
+        <input type="hidden" name="pmMIAPETYP" value="" />
+        <input type="hidden" name="pmIDMIAPE" value=""  />		
+	</form>
+		<tr>
+			<td align="right" bgcolor="#FFFFFF"><a href="javascript:validalogin()" onMouseOver="changeImage(null,'aceptar','aceptarfx')" onMouseOut="changeImage(null,'aceptar','aceptar');"><img name="aceptar" src="../Imagenes/p_bot_accept.gif" alt="" width="59" height="14" border="0"></a></td>		
+		</tr>			
+	</table>	
+    	
+	<table width="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td height="2" bgcolor="#07A8C4"></td>
+		</tr>	
+    </table>
+   	<table width="100%" cellspacing="0" cellpadding="0">		
+		<tr>
+			<td><p><br>
+			To create an account or remember your<br> 
+			password or user name, please click  <a href="Register.asp" class="enlacepie">here</a><br>
+            Password for guest user: '<em>guest</em>'
+            <br />
+	          <br>
+	          </p>
+		  </td>
+		</tr>		
+	</table>			
+	 </div><center><a href="http://www.proteored.org/Index_clinicalproteomics_dic14.asp" title="V Reunión Científica de Proteómica Clínica" target="_blank"><img src="botonV_ProtClinic.gif" align="absmiddle"></a>
+            </center></td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	</tr>
+	
+	<tr>
+		<td bgcolor="#f6fbfe" width="10"></td>
+		<td width="211" valign="top" align="center">
+		
+			<!-- Links -->
+			<table width="100%" cellspacing="6" cellpadding="0">
+				<tr>
+					<td><span class="titulo1">Links</span></td>
+				</tr>
+			</table>
+			<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">
+				<tr>
+					<td width="14" valign="top"><img src="Imagenes/p_esq_news_sup_izq.gif" alt="" width="14" height="15" border="0"></td>
+					<td width="172" valign="top" height="15" background="Imagenes/p_puntitos_news_horiz.gif"></td>
+					<td width="14" valign="top"><img src="Imagenes/p_esq_news_sup_der.gif" alt="" width="14" height="15" border="0"></td>
+				</tr>
+			</table>
+			<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">
+				<tr>
+					<td rowspan="2" width="1" valign="top" align="left"  background="Imagenes/p_puntitos_news_vert.gif"></td>
+					<td valign="top" width="198"></td>
+					<td rowspan="2" width="1" valign="top" align="left" background="Imagenes/p_puntitos_news_vert.gif"></td>
+				</tr>
+				<tr>
+					<td width="200" height="95" valign="top">
+						<table width="100%" cellspacing="4" cellpadding="0" height=95">
+                        <tr>
+                       	  <td>
+        <a href="http://community.uv.es/" class="enlacePie" target="_blank"><img src="Imagenes/logo_SPHPP3.jpg" alt="Spanish Human Proteome Project" align="top" title="Spanish Human Proteome Project"style="float:left;" /><b>&nbsp; Spanish Human<br>&nbsp; Proteome Project</b></a><br><br><br>
+                          </td>
+                        </tr>
+                        
+							<tr>
+								<td valign="middle"> 
+									<p><a href="http://proteored.blogspot.com/" class="enlacePie" target="_blank"><b><img src="Imagenes/ico_blog.gif" alt="" width="16" height="16" border="0" style="float:left;"/>&nbsp;ProteoRed Blog</b></a></p><br>
+								</td>
+							</tr>
+                            
+							
+							<tr>
+								<td> 
+									<a href="Links.asp" class="enlacePie"><b>&nbsp;Links of interest</b><img src="Imagenes/linksInterest.jpg" alt="" width="16" height="16" border="0" style="float:left;"/></a><br><br>
+								</td>
+							</tr>	
+							<tr>
+								<td> 
+									<a href="http://www.technologynetworks.com/Proteomics" target="_blank" class="enlacePie"><b>&nbsp;News about Proteomics</b><img src="news1.jpg" alt="" border="0" style="float:left;"/></a><br><br><br>
+								</td>
+							</tr>	
+                            
+  							<tr>
+								<td> 
+									<a href="http://www.barcdb.org/" target="_blank" class="enlacePie"><img align="left" src="BARClogo.gif" alt="" border="0"/><b>Biobanking Analysis Resource Catalogue</b></a>
+								</td>
+							</tr>	                          
+                            
+						</table>															
+					</td>
+				</tr>
+			</table>
+			<table width="100%" cellspacing="0" cellpadding="0" bgcolor="#EAEFF3">			
+				<tr>
+					<td width="14" valign="top"><img src="Imagenes/p_esq_news_inf_izq.gif" alt="" width="14" height="15" border="0"></td>
+					<td width="172" height="15" valign="top" background="Imagenes/p_puntitos_news_horiz2.gif"></td>
+					<td width="14" valign="top"><img src="Imagenes/p_esq_news_inf_der.gif" alt="" width="14" height="15" border="0"></td>
+				</tr>				
+			</table>
+			<!-- Fin Links -->
+		
+		</td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+		<td width="185" valign="top">
+        
+        
+			<table width="100%" cellspacing="0" cellpadding="0">
+<!-- 				<tr>
+					<td rowspan="2"><a href="contact.asp"><img src="Imagenes/p_ico_contact.gif" alt="" width="59" height="60" border="0"></a></td>
+					<td><span class="titulo2">Contact</span></td>
+				</tr>
+				<tr>
+					<td>
+						If you have any 
+						<br>
+						question or suggestion
+						<br>
+						click <a href="contact.asp" class="enlacePie">here</a>
+						<br><br><br>
+					</td>
+				</tr> -->
+				<tr>
+					<td colspan="2"><span class="titulo2">Contact</span></td>
+				</tr>
+				<tr>
+					<td><a href="contact.asp"><img src="Imagenes/p_ico_contact.gif" alt="" width="59" height="60" border="0"></a></td>
+					<td>
+						<br>
+						If you have any 
+						<br>
+						question or suggestion
+						<br>
+						click <a href="contact.asp" class="enlacePie">here</a>
+						<br><br><br>
+					</td>
+				</tr>				
+			</table>		
+<table width="80%" align="center" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><span class="textverde">ProteoRed is partially supported by</span></td>
+				</tr>
+				<tr>
+					<td></td>
+				</tr>				
+			</table>
+		</td>
+		<td bgcolor="#f6fbfe" width="10"></td>
+	</tr>	
+	
+	<tr><td colspan="7" align="center">
+    <table cellspacing="10" id="mitablacss">
+      <tr>
+        <td><div align="center"></div></td>
+	  </tr>
+	 </table>
+	</td>
+	</tr>	
+</table>
+   
+
+				</td></tr>
+			</table>
+			<table width="100%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td align="Left"><img src="../Imagenes/p_esq_pie_izq_01.gif" alt="" width="16" height="37" border="0"></td>
+					<td align="center" background="../Imagenes/p_pie_pixel.gif" width="628"><span class="textservices">@2009 ProteoRed. All rights reserved.</span></td>
+					<td align="center" background="../Imagenes/p_pie_pixel.gif" width="100"><span class="textservices"><a href="javascript:AbrirCreditos();" class="enlaceSinBold">Credits</a></span></td>
+					<td align="Right"><img src="../Imagenes/p_esq_pie_der_01.gif" alt="" width="16" height="37" border="0"></td>					
+				</tr>
+			</table>
+		</td></tr>
+	</table>	</td>
+	<td width="50%" valign="bottom">
+		<table width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="33"></td>
+			</tr>
+		</table>	</td>
+</tr>
+</table>
+	
+	
+    <!--Codigo para GOOGLE ANALYTICS -->
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-11619260-1");
+		pageTracker._trackPageview();
+		} catch(err) {}
+    </script>
+	<!--Codigo para GOOGLE ANALYTICS -->
+
+
+<!-- 	</td>
+	<td width="50%" valign="bottom">
+		<table width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="33"></td>
+			</tr>
+		</table>		
+	</td>
+</tr>
+</table> -->
+
+
+<map name="Map">
+  <area id="coru" shape="circle" coords="35,29,10" href="#" alt="A Coruña" title="A Coruña">
+  <area id="bilbao" shape="circle" coords="171,38,9" href="#" title="Bilbao">
+  <area id="pamplona" shape="circle" coords="200,56,10" href="#" title="Pamplona">
+  <area id="barcelona" shape="circle" coords="281,79,9" href="#" title="Barcelona">
+  <area id="salamanca" shape="circle" coords="117,104,9" href="#" title="Salmanca">
+  <area id="coord" shape="rect" coords="132,131,156,151" href="#" title="Unidad de Coordinación">
+  <area id="madrid" shape="circle" coords="155,161,10" href="#" title="Madrid">
+  <area id="valencia" shape="circle" coords="227,160,10" href="#" title="Valencia"> 
+  <area id="cordoba" shape="circle" coords="110,230,10" href="#" title="Córdoba">
+  <area id="granada" shape="circle" coords="155,248,10" href="#" title="Granada">
+</map>
+</BODY>
+</HTML>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Ejercicio01</title>
+	<meta name="que es" content=" ejercicio 1, tema 4, parte III" />
+
+	<!-- Diseñar una Web para mostrar información de una película, sería algo así como el póster de una película, pero solo en modo texto, 
+	ya que aún no tenéis los conocimientos necesarios para agregar imágenes a la página Web. 
+	Todo el contenido del body debe estar dentro de una etiqueta div identificada con el nombre contenedor Para el título de la película 
+	utilizar un encabezado de nivel 1. Debe estar centrado, de color rojo y con un borde de color negro y grosor un pixel. Después del título 
+	de la película y en líneas diferentes, poner el director, el actor principal, el actor secundario, el argumento y la puntuación. Para cada 
+	uno de estos apartados utilizar un título de nivel superior (más pequeño). Aplica estilos locales para cambiar el color de cada título, así 
+	como para poner el contenido del apartado argumento justificado. -->
+	
+	<style>
+
+		div.cabecera{
+			text-align:center;/* para centrar el texto*/
+			border: 1px solid black; /* para mostrar el borde de  la caja*/
+			background-color: #4dd2ff ; /*rellenar color*/
+			}	
+		a{
+			color:red; /* color a la letra del titulo principal que TIENE UN ENLACE al video del corto de la peli */
+			}
+		
+		h2.subtitulo1{
+			color:#ff00ff; 
+			}
+		h2.subtitulo2{
+			color:#660000; 
+			}
+		h2.subtitulo3{
+			color:#b38f00; /* dar color*/
+			}
+		h2.subtitulo4{
+			text-align:center; /* centrar subtitulo 4*/
+			
+			color:#004d1a; 
+			}
+		h2.subtitulo5{
+			color:#ff0000;
+			}
+		li.cajon{
+			border: solid blue; /* borde solido de color azul*/
+			width: 250px; /* ancho 250px */
+			}
+		p.espacioaladerecha{
+			margin-left: 3em; /* espacio entre el margen derecho de 3.5em */
+			}
+		div.contenedor{
+			margin-top: 0.5em; /* margen superior de 0.5em */
+			background-color: #33ffd6; /* color del fondo */
+			color:black; /* color de la letra = negra */
+			border: 1px solid #000099; /* borde del contenedor */
+			text-align:justify; /* texto justificado */
+			}
+</style>
+
+</head>
+<body>
+
+<div class="cabecera" >
+
+	<h1><a href="https://www.youtube.com/watch?v=cd_GglO9JsQ">MOANA con un  link</a></h1>
+	<img src="imagenes/moana.jpg" alt="moana" width="400" height="200" title="Poster Moana">
+	
+</div>
+
+<div class="contenedor"> 
+		
+	<ul style="list-style-type: none"><h2 class="subtitulo4">ARGUMENTO dentro de una lista desordenada eliminando viñetas</h2>
+		<li><p>	Hace 2.000 años, en el Pacífico Sur. Vaiana es una joven apasionada e intrépida que vive en este mundo ancestral y exótico. Ella es la única hija del líder de una tribu que habita estas islas <br>
+				y que pertenece a una familia de varias generaciones de marinos. El deseo de Vaiana es explorar el mundo navegando por el océano, ya que ante todo es una soñadora que siente un vínculo <br>
+				extraordinario con el mar. <br>
+				<br>
+				La joven se embarcará en un épico viaje para cumplir con la búsqueda que emprendieron sus antepasados. En su aventura hacia una isla legendaria, Vaiana se unirá con un cerdito hablador <br>
+				llamado Pua y un gallo de nombre Heihei, además de un legendario semidiós llamado Maui. Juntos atravesarán el océano abierto, y encontrarán a su paso mucha acción, enormes criaturas <br>
+				marinas, submundos sorprendentes y culturas antiguas. </p></li>
+	</ul>
+	
+  	<ul style="list-style-type: none"> <h2 class="subtitulo1">DIRECTORES</h2> <!--el caso de "none" es muy importante porque se utiliza para todo tipo de lista sin que se vea la viñeta--> 
+		<li><p><b>John Musker, Ron Clements CON NEGRITA "b"</b></p></li>
+	</ul>
+	
+	<ul style="list-style-type: none"><h2 class="subtitulo2">ACTORES PRINCIPALES </h2>
+		<li><p><i> Phillipa Soo, Auli'i Cravalho, Dwayne Johnson CON ITÁLICA</i></p></li>
+	</ul>
+	
+	<ul style="list-style-type: none"><h2 class="subtitulo3">ACTORES SECUNDARIOS</h2>
+		<li><p><u>Alan Tudyk, Jemaine Clement, Temuera Morrison, Rachel House con SUBRAYADO</u></p></li>
+	</ul>
+	
+	<ul style="list-style-type: none"><h2 class="subtitulo5">PUNTUACION</h2>
+		<li class="cajon"><p class="espacioaladerecha"> <b>8 puntos dentro de caja </b> </p></li>
+	</ul>
+	
+</div>
+
+</body>
+</html>
+
+
+

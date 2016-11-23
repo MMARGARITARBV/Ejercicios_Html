@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ejercicio04</title>
+
+<!--Margarita Benitez - 1º de DAW-->
+<!--Fecha de creación: 19/11/2016-->
+<!-- la forma de escribir un comentario dentro del css o style es /* */ o //-->
+<style>
+hr{
+	display: block; /* display: pantalla block: bloque = que se visualice como un bloque */ 
+    margin-top: 0.5em; /* margen superior */
+    margin-bottom: 0.5em;/* margen inferior */
+    margin-left: auto; /* margen izquierdo */
+    margin-right: auto; /* margen derecho */
+    border-style: inset; /* inset es un tipo de stilo para el borde */
+    border-width: 7px; /* ancho del borde */
+}
+li.titulo{
+	font-size:14pt; /* tamaño de la fuente o letra*/
+	font-weight:bold; /* establece el grosor de cada letra , fuente carga negrita*/
+}
+
+li.subtitulo{
+	font-size:14pt; /* tamaño de la fuente o letra*/
+	font-weight:normal; /* establece que el grosor de letra es normal */
+	}
+<!-- 4. Crea una lista ordenada cuyos elementos sean Doctores, Ayudantes y
+Auxiliares. Dentro de Doctores, define una lista no ordenada cuyos elementos
+sean: Juana Pérez, Alberto Márquez, Raúl Moreno. Dentro de Ayudantes, define
+una lista no ordenada cuyos elementos sean: Noelia Suárez, Abel Rebollo. Dentro
+de Auxiliares crea una lista no ordenada cuyos elementos sean Silvia Estévez,
+Angela González y Cuarthemoc Adanez. Separa cada lista con un elemento hr de
+color azul, 5 pixeles de grosor y que ocupe el 50% del ancho disponible. -->
+
+</style>
+
+</head>
+<body>
+		
+	<!--Separa cada lista con un elemento hr de	color azul, 5 pixeles de grosor y que ocupe el 50% del ancho disponible.-->
+	<h1> lista desordenada dentro de una ordenada con separador en medio, etiquetas dentro de la lista ol, li, ul, li</h1>
+	<!--Parte A-->
+	<ol>
+		<li class="titulo">DOCTORES <!-- en el caso de una lista desordenada dentro de una
+										ordenada, la viñeta por defecto sale el circulito vacío-->
+				
+			<ul class="subtitulo">
+				<li>Juana Pérez</li> 
+				<li>Alberto Márquez</li> 
+				<li>Raúl Moreno</li>
+			</ul>
+		</li> 
+		
+	
+	<hr>
+		
+	
+		<li class="titulo">AYUDANTES
+			
+			<ul class="subtitulo">
+				<li>Noelia Suárez</li> 
+				<li>Abel Rebollo</li> 
+			</ul>
+		</li>
+		
+	<hr>		
+		
+		<li class="titulo">AUXILIARES
+			
+			<ul class="subtitulo">
+				<li>Silvia  Estévez</li> 
+				<li>Angela González</li> 
+				<li>Cuarthemoc Adanez</li>
+			</ul>
+		</li>
+	</ol>
+	<ol> 
+		<li>
+			<h2> ejemplo para probar las viñetas por defecto</h2>
+		</li>
+		<ul>
+			<li> yo</li>
+			<li> tu</li>
+			<li> el</li>
+		</ul>
+	</ol>
+				
+</body>
+</html>
+
+
+

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Ejercicio01</title>
+
+<!--Margarita Benitez - 1º de DAW-->
+<!--Fecha de creación: 20/10/2016-->
+
+<!-- 1. Crea cuatro listas ordenadas con nombres de países europeos.
+		A. La primera debe tener un orden numérico ascendente. Disponer un título de
+		segundo nivel.
+		B. Igual que el apartado anterior, pero comienza con el número 10.
+		C. Igual que el anterior, pero cambia a orden descendente.
+		D. Igual que le apartado A, pero cambia al tipo de orden a alfabético utilizando
+		el atributo type. Ahora cambia de diferentes tipo de orden con estilo local (usa
+		el atributo style) y buscando la regla CSS en W3schools. -->
+
+
+</head>
+<body>
+	<h1>Listas ORDENADAS numerada y Abecedario, entiquetas ol, li</h1>
+ 	<ol>
+		<li><h2>ESPAÑA, Ejemplo realizado con c/lista ordenada de forma independiente</h2></li>
+	</ol>
+	
+	<ol>
+		<li>textoejemplo</li> 
+		<li>textoejemplo</li>
+	</ol>
+			
+	<ol>	
+		<li value="10" ><h2>ITALIA</h2></li> 
+	</ol>
+	
+	<ol>
+		<li value="11">textoejemplo</li> 
+		<li>textoejemplo</li>
+	</ol>
+	
+	<ol>
+		<li value="10"><h2>FRANCIA</h2></li> <!-- utilizamos el value para especificar el valor en el que queremos que continue  la lista-->
+	</ol>
+	
+	<ol reversed> <!-- reversed se pone dentro del ol -->
+		
+		<li value="9">textoejemplo</li>
+		<li>textoejemplo</li>
+	</ol>	
+	
+	<ol>		
+		<li type="a" value="3"><h2> ALEMANIA Ejemplo realizado con c/lista ordenada de forma independiente de tipo Abecedario </h2></li> <!-- con el type especificamos el tipo de valor de la lista y value especificamos el valor por el que empieza -->
+	</ol>
+	
+	<ol type="a" start="4"> <!-- el start me inicializa la lista al valor "4"-->
+				<li>textoejemplo</li> 
+				<li>textoejemplo</li> 
+	</ol>
+	
+	<ol>	
+		<li type="a"><h2>Alemania</h2></li>
+	</ol>
+	<ol type="a" start="2">
+				<li>textoejemplo</li> 
+				<li>textoejemplo</li>
+	</ol>
+	
+	
+	<ol>
+		<li><h2>ESPAÑA. Ejemplo de una lista ordenada dentro de otra lista ordenada</h2></li>
+			<ol>
+				<li>textoejemplo</li> 
+				<li>textoejemplo</li>
+			</ol>
+			
+		
+		<li value="10" ><h2>ITALIA</h2></li> 
+			<ol> <!-- start="50" En una lista que tenemos dentro de una pestaña, start es el que nos permite mostrar el primer valor que deseamos que salga de esa lista-->
+				<li value="11">textoejemplo</li> 
+				<li>textoejemplo</li>
+			</ol>
+		
+			
+		<li value="10"><h2>FRANCIA</h2></li> <!-- utilizamos el value para especificar el valor en el que queremos que continue  la lista-->
+			<ol reversed> <!-- reversed se pone dentro del ol -->
+				<li value="9">textoejemplo</li>
+				<li>textoejemplo</li>
+			</ol>
+	</ol>	
+	
+	<ol>		
+		<li type="a" value="3"><h2> ALEMANIA Ejemplo de una lista ordenada dentro de otra lista ordenada de tipo Abecedario </h2></li> <!-- con el type especificamos el tipo de valor de la lista y value especificamos el valor por el que empieza -->
+			<ol type="a" start="4"> <!-- el start me inicializa la lista al valor "4"-->
+				<li>textoejemplo</li> 
+				<li>textoejemplo</li> 
+			</ol>		
+	</ol>	
+			
+</body>
+</html>
+
+
+

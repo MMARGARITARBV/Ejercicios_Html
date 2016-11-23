@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<title>Ejercicio01</title>
+
+<!--Margarita Benitez - 1º de DAW-->
+<!--Fecha de creación: 20/11/2016-->
+	<style>
+		table{ margin:50px auto; /* auto es centrar(dependiendo de ancho del navegador) ESPACIO ENTRE LOS OBJETOS */
+			   width:50%; /* ocupa el 50% del ancho de la pantalla */
+		       } 
+		
+		table, td {
+			border: 1px solid black; /* borde solido negro */
+			border-collapse: collapse; 
+				}
+							
+		td {
+			padding-top: 8px; /* acolchado superior */
+			padding-bottom: 8px; /* acolchado fondo */
+			text-align: center;
+				}
+		table.dos{
+			border-collapse: separate; /* el navegador lo usa por defecto */
+			border-spacing:  3px;
+				}
+</style>
+
+</head>
+<body> 
+	<h2> EJEMPLO tabla con el borde fucionado . Border-collapse: collapse</h2>
+	<table>
+	  <tr>
+		<td>A1</td> <td>B1</td>	<td>C1</td>
+	  </tr>
+	  <tr>
+		<td>A2</td>	<td>B2</td>	<td>C2</td>
+	  </tr>
+	  <tr>
+		<td>A3</td>	<td>B3</td> <td>C3</td>
+	  </tr>
+	</table>
+	
+	<h2> EJEMPLO tabla con Borde con espacios. Border-collapse: separate, los navegadores lo usan por defecto</h2>	
+	
+	<table class="dos">
+	  <tr>
+		<td>A1</td> <td>B1</td>	<td>C1</td>
+	  </tr>
+	  <tr>
+		<td>A2</td>	<td>B2</td>	<td>C2</td>
+	  </tr>
+	  <tr>
+		<td>A3</td>	<td>B3</td> <td>C3</td>
+	  </tr>
+	</table>
+				
+</body>
+</html>
+
+
+
