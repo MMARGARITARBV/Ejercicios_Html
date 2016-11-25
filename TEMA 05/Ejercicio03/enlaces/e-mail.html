@@ -12,17 +12,32 @@
 
 <body>
 
-	<h1>CORREO ELECTRONICO</h1>
-	<ul>
-		<li><a href="mailto:someone@example.com?Subject=Hello%20again">Send mail!</a></li>
-		<li><a href="mailto:mmargaritarb@gmail.com?Subject=agregame%20a%20tu%20lista%20de%20correo" target="_blank">Link a mi dirección de correo eléctronico y un pequeño mensaje por defecto</a></li> 
-		<!-- no olvidar que en el caso de escribir algo dentro de un correo debe llevar los espacios marcados con %20-->
-			<p> solo funcionará si su navegador cuenta con un sistema de envío de correo eléctronico.</p>
+	<h1>OPCIONES DE CORREO ELECTRONICO</h1>
+	<ol>
+		<li><h2> ME OBLIGA A ABRIR EL GESTOR DE CORREO ELECTRONICO utilizamos href </h2></li>
+			
+			<ul>
+				<li><a href="mailto: mmargaritarb@gmail.com?subject=agregame%20a%20tu%20lista%20de%20correo" target="_blank">Link a mi dirección de correo eléctronico y un pequeño mensaje por defecto</a></li> 
+				<!-- no olvidar que en el caso de escribir algo dentro de un correo debe llevar los espacios marcados con %20-->
+				<p> solo funcionará si su navegador cuenta con un sistema de envío de correo eléctronico.</p>
 	
-		<li> <a href="mailto:mmargaritarb@gmail.com?cc=someoneels@example.com&bcc=andsomeoneelse@example.com
-				&subject=agragame%20a%20tu%20lista%20de%20contactos&body=Te%20quiero%20y%20gracias" target="_blank">Link a mi email con campos complementados previamente</a></li>
-			<p> solo funcionará si su navegador cuenta con un sistema de envío de correo eléctronico.</p>
-	</ul>
+				<li> <a href="mailto: mmargaritarb@gmail.com?cc=someoneels@example.com&bcc=andsomeoneelse@example.com
+						&subject=agragame%20a%20tu%20lista%20de%20contactos&body=Te%20quiero%20y%20gracias" target="_blank">Link a mi email con campos complementados previamente</a></li>
+					<p> solo funcionará si su navegador cuenta con un sistema de envío de correo eléctronico.</p>
+			</ul>
+			
+		<li><h2> ME OBLIGA A ABRIR EL GESTOR DE CORREO ELECTRONICO pero utilizamos form action (FORMULARIOS) </h2></li>
+				<p> Nos permite incluir un texto en el cuerpo del mensaje con textarea</p>
+			
+				<form action="mailto:mmargaritarb@gmail.com" method="post" enctype="text/plain" target="_blank">
+					Mensaje:<br> <!-- salto de linea sin salir del parrafo -->
+					<textarea name="mensaje"></textarea>
+					<br>
+				<input type="submit" value="enviar"> <!-- input es para especificar que es un campo de entrada , submit es el BOTON para enviar , en value especificamos el valor que introducimos en el campo-->
+					<br>
+					Primer nombre: <input type="text" name="Nombre" value="Maria..."><br> <!-- input = campo de entrada, type es de tipo texto y name es el texto que aparece como sugerencia -->
+				</form>
+	</ol>
 </body>
 
 </html>

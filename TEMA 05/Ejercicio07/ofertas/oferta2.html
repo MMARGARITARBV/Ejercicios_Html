@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="es"> 
+<head>
+<meta charset="UTF-8"/>
+<meta name="que es" content="la plantilla"/>
+
+<title>oferta2</title>
+<style>
+	h1{text-align:center;}
+</style>
+</head>
+
+<body>
+
+	<h1>OFERTA 2: Dos mozarrellas a 6€</h1>
+	<p> Tienes dos opciones para enviar por e-mail la oferta:</p>
+					
+	<ol>
+		<h2><li><a href="mailto: mmargaritarb@gmail.com?subject=PROMOCION&body=OFERTA2%20gracias">Enviar e-mail con oferta directamente</a></li></h2>
+			<p> NOTA: Tenga en cuenta que este sistema solo funcionará si su navegador cuenta con un sistema de envío de correo eléctronico.</p>
+					
+		
+		<h2><li>Rellenar formulario y introducir más datos (Formularios FROM) </li></h2>
+						
+			<form action="mailto:mmargaritarb@gmail.com" method="post" enctype="text/plain">
+			
+				Nombre y apellido: <input type="text" name="NombreCompleto" value="Escriba su nombre completo"><br> <!-- input = campo de entrada, type es de tipo texto y name es el texto que aparece como sugerencia -->
+
+				Mensaje:
+					<br> <!-- salto de linea sin salir del parrafo -->
+					<textarea name="PROMOCION">OFERTA2</textarea>
+					<br>
+					<input type="submit" value="enviar"> <!-- input es para especificar que es un campo de entrada , submit es el BOTON para enviar , en value especificamos el valor que introducimos en el campo-->
+					<br>
+			 
+			</form>
+	</ol>
+	
+	<a href="../index.html">Volver a la página de inicio</a>
+	
+</body>
+
+</html>
